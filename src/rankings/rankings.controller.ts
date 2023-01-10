@@ -17,10 +17,11 @@ export class RankingsController {
     const originMessage = context.getMessage();
 
     try {
-      this.logger.log(`Data: ${data}`);
+      this.logger.log(`Data: ${JSON.stringify(data)}`);
       const idMatch: string = data.idMatch;
       const match: MatchInterface = data.match;
       await this.rankingsService.processMatch(idMatch, match);
+      await channel.ack(originMessage);
     } catch (error) {
       this.logger.error(error.message);
       const ackErrosFIlter = ackErros.filter((ackErro) =>
