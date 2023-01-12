@@ -126,7 +126,7 @@ export class RankingsService {
 
       _.remove(rankingRegister, function (item) {
         return (
-          challenges.filter((challenge) => (challenge._id = item.challenge))
+          challenges.filter((challenge) => challenge._id == item.challenge)
             .length == 0
         );
       });
