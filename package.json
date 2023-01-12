@@ -29,6 +29,8 @@
     "@nestjs/platform-express": "^9.0.0",
     "amqp-connection-manager": "^4.1.10",
     "amqplib": "^0.10.3",
+    "lodash": "^4.17.21",
+    "moment-timezone": "^0.5.40",
     "mongoose": "^6.8.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
